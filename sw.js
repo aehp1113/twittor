@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
         if (cache) return cache;
 
         return fetch(event.respuest).then( res => 
-            actualizarCacheDinamico(DYNAMIC_CACHE, e.request, res ))
+            actualizarCacheDinamico(DYNAMIC_CACHE, event.request, res ))
 
     })
 })
